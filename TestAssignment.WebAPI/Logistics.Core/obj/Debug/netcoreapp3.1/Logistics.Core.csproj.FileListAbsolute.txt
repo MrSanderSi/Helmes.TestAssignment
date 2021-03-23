@@ -1,0 +1,12 @@
+D:\Helmes\Helmes.TestAssignment\TestAssignment.WebAPI\Logistics.Core\bin\Debug\netcoreapp3.1\Logistics.Core.deps.json
+D:\Helmes\Helmes.TestAssignment\TestAssignment.WebAPI\Logistics.Core\bin\Debug\netcoreapp3.1\Logistics.Core.dll
+D:\Helmes\Helmes.TestAssignment\TestAssignment.WebAPI\Logistics.Core\bin\Debug\netcoreapp3.1\Logistics.Core.pdb
+D:\Helmes\Helmes.TestAssignment\TestAssignment.WebAPI\Logistics.Core\bin\Debug\netcoreapp3.1\Logistics.DB.dll
+D:\Helmes\Helmes.TestAssignment\TestAssignment.WebAPI\Logistics.Core\bin\Debug\netcoreapp3.1\Logistics.DB.pdb
+D:\Helmes\Helmes.TestAssignment\TestAssignment.WebAPI\Logistics.Core\obj\Debug\netcoreapp3.1\Logistics.Core.csprojAssemblyReference.cache
+D:\Helmes\Helmes.TestAssignment\TestAssignment.WebAPI\Logistics.Core\obj\Debug\netcoreapp3.1\Logistics.Core.AssemblyInfoInputs.cache
+D:\Helmes\Helmes.TestAssignment\TestAssignment.WebAPI\Logistics.Core\obj\Debug\netcoreapp3.1\Logistics.Core.AssemblyInfo.cs
+D:\Helmes\Helmes.TestAssignment\TestAssignment.WebAPI\Logistics.Core\obj\Debug\netcoreapp3.1\Logistics.Core.csproj.CoreCompileInputs.cache
+D:\Helmes\Helmes.TestAssignment\TestAssignment.WebAPI\Logistics.Core\obj\Debug\netcoreapp3.1\Logistics.Core.csproj.CopyComplete
+D:\Helmes\Helmes.TestAssignment\TestAssignment.WebAPI\Logistics.Core\obj\Debug\netcoreapp3.1\Logistics.Core.dll
+D:\Helmes\Helmes.TestAssignment\TestAssignment.WebAPI\Logistics.Core\obj\Debug\netcoreapp3.1\Logistics.Core.pdb
