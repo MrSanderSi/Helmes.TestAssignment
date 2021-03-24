@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import { NewLetterModal } from './components/LettersModal';
 import { LettersTable } from './components/LettersTable';
+import { NewParcelModal } from './components/ParcelsModal';
+import { ParcelsTable } from './components/ParcelsTable';
 
 
 
@@ -10,10 +12,17 @@ function App() {
     <div className="App">
       <h3>Orders</h3>
       <div style={{ maxWidth: '70%', margin: 'auto' }}>
-        <div style={{ textAlign: 'right' }}>
-          <NewLetterModal/>
+        <div style={{ textAlign: 'center' }}>
+          <NewLetterModal />
         </div>
-        <lettersTable/>
+        <div style={{ textAlign: 'center'}}>
+          <NewParcelModal />
+        </div>
+        <div style={{textAlign: 'center'}}>
+          <LettersTable />
+          <ParcelsTable />
+        </div>
+        
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ const inistialState = {
 }
 
 export const ActionTypes = {
-    SET_PARCELS: 'SET_PARCELS', 
+    SET_PARCELS: 'SET_PARCELS',
     NEW_PARCELS: 'NEW_PARCELS',
     SET_LETTERS: 'SET_LETTERS',
     NEW_LETTERS: 'NEW_LETTERS'
@@ -20,16 +20,16 @@ export const ActionCreators = {
 }
 
 export default function Logistics(state = inistialState, action) {
-    switch(action.type) {
+    switch (action.type) {
         case ActionTypes.SET_PARCELS:
-            return {...state, parcels: [...action.payload]};
+            return { ...state, parcels: [...action.payload] };
         case ActionTypes.NEW_PARCELS:
-            return {...state, parcels: [...state.orders, action.payload]};
+            return { ...state, parcels: [...state.parcels, action.payload] };
+        case ActionTypes.SET_LETTERS:
+            return { ...state, letters: [...action.payload] };
         case ActionTypes.NEW_LETTERS:
-            return {...state, parcels: [...state.payload]};
-        case ActionTypes.NEW_LETTERS:
-            return {...state, parcels: [...state.orders, action.payload]};
+            return { ...state, letters: [...state.letters, action.payload] };
         default:
             return state;
-    }   
+    }
 }

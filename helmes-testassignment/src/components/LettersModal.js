@@ -2,7 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Form, Modal, Button, InputGroup, FormControl } from "react-bootstrap";
 import { NewLetter } from '../services/orders';
-
+/*
+const NewLetterForm = [
+    {name: 'BagNumber', title: 'Bag number'},
+    {name: 'AmountOfLetters', title: 'Amount of letters'},
+    {name: 'BagWeight', title: 'Bag weight'},
+    {name: 'ShippingPrice', title: 'Shipping price'}
+]*/
 export const NewLetterModal = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -23,29 +29,44 @@ const LetterModal = ({ letter, handleFormSubmit, show, handleClose }) => {
     }, [letter]);
 
     return (
-        <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
+        <div style={{padding: '2px'}}>
+            <Modal show={show} onHide={handleClose} style={{padding:'5px'}}>
+            <Modal.Header>
+                <Modal.Title style={{textAlign:'center'}}>Shipment of Letters</Modal.Title>
             </Modal.Header>
-            <Form onSubmit={event => {
+            <Form style={{textAlign:'center'}} onSubmit={event => {
                 event.preventDefault();
                 handleFormSubmit(dispatch, modalLetter);
             }}>
-                <Modal.Body>
-                    <InputGroup>
-                        <FormControl value={modalLetter === null ? '' : modalLetter.value}
-                            onChange={event => setModalLetter({ ...modalLetter, value: event.target.value })} />
-                    </InputGroup>
+                <Modal.Body style={{padding:'5px'}}>
+                    <Form.Group>
+                        <Form.Label style={{margin:'10px'}}>Bag number: </Form.Label>
+                        <FormControl value={modalLetter === null ? '' : modalLetter.BagValue}
+                            onChange={event => setModalLetter({ ...modalLetter, BagValue: event.target.value })} />
+                        <Form.Label style={{margin:'10px'}}>Amount of letters: </Form.Label>
+                        <FormControl value={modalLetter === null ? '' : modalLetter.AmountOfLetters}
+                            onChange={event => setModalLetter({ ...modalLetter, AmountOfLetters: event.target.value })} />
+                        <Form.Label style={{margin:'10px'}}>Bag weight: </Form.Label>
+                        <FormControl value={modalLetter === null ? '' : modalLetter.BagWeight}
+                            onChange={event => setModalLetter({ ...modalLetter, BagWeight: event.target.value })} />
+                        <Form.Label style={{margin:'10px'}}>Amount of letters: </Form.Label>
+                        <FormControl value={modalLetter === null ? '' : modalLetter.ShoppingPrice}
+                            onChange={event => setModalLetter({ ...modalLetter, ShoppingPrice: event.target.value })} />
+                        
+                    </Form.Group>
                 </Modal.Body>
-                <Modal.Footer>
+                <Modal.Footer style={{paddingBottom:'5px'}}>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
-            </Button>
-                    <Button type='submit' variant="primary" onClick={handleClose}>
-                        Save
-            </Button>
-                </Modal.Footer>
-            </Form>
-        </Modal>
+                </Button>
+                        <Button type='submit' variant="primary" onClick={handleClose}>
+                            Save
+                </Button>
+                    </Modal.Footer>
+                </Form>
+            </Modal>
+        </div>
+        
+        
     );
 }

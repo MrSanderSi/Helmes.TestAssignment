@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { GetParcels } from '../services/orders'
 
 export const ParcelsTable = () => {
     const parcels = useSelector(state => state.logistics.parcels);
